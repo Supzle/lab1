@@ -2,9 +2,8 @@ package lab1;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
-
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args, Doublecost Testcost) {
 		String[] disArr = new String[args.length];
 		for (int j = 0; j < args.length; j++) {
 			disArr[j] = args[j].toLowerCase();
@@ -109,5 +108,6 @@ public class Main {
 		DecimalFormat df = new DecimalFormat(".0");
 		System.out.println("The total cost of your order is: "
 				+ df.format(order.cost()));
+		Testcost.valu = order.cost();
 	}
 }
